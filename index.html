@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday, My Love JUANNNNNNN ❤️</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font romantis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="stars"></div>
+    <div id="particles"></div>
+
+    <!-- Tombol musik -->
+    <button id="musicBtn" class="music-btn" type="button">
+    ♫ Putar Musik
+  </button>
+
+    <!-- File musik lokal -->
+
+    <audio id="birthdayMusic" autoplay loop preload="auto">
+    <source src="music/BACKSOUND.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutaran audio.
+    </audio>
+
+    <!-- HALAMAN 1: PEMBUKA -->
+    <section class="screen" id="intro">
+        <div class="content">
+            <p class="eyebrow">A LITTLE SURPRISE FOR YOU HEHEHE</p>
+
+            <div class="heart-orb">💖</div>
+
+            <h1>Hey, My Love...</h1>
+
+            <p class="subtitle">
+                KEKNYA AKU TELAT BUAT INI TAPI.<br> Ada seseorang yang sangat spesial<br> yang ingin aku bahagiakan.
+            </p>
+
+            <button class="main-btn" id="startBtn" type="button">
+        Buka Kejutanmu ✨
+      </button>
+
+            <p class="small-note">MADE WITH LOVE -J, JUST FOR YOU ♡</p>
+        </div>
+    </section>
+
+    <!-- HALAMAN 2: ULANG TAHUN -->
+    <section class="screen hidden" id="birthday">
+        <div class="content">
+            <p class="eyebrow">TODAY IS ALL ABOUT YOU MY LOVEEE SEKEBON SAWITT</p>
+
+            <h1>Happy Birthday yaaaaaaaa!</h1>
+
+            <p class="subtitle" id="birthdaySubtitle">
+                Selamat ulang tahun, sayangku cintakuuu❤️
+            </p>
+
+            <div class="cake">🎂</div>
+
+            <p class="subtitle">
+                Coba Sebentar Pejamkan matamu, buatlah sebuah harapan, dan semoga semua impianmu menjadi nyata.
+            </p>
+
+            <button class="main-btn" id="letterBtn" type="button">
+        Buka Surat Cinta 💌
+      </button>
+        </div>
+    </section>
+
+
+    <!-- ======================================
+        SLIDESHOW FOTO KENANGAN
+    ======================================= -->
+
+    <section id="screen-memories" class="screen memories-screen">
+
+        <div class="memories-content">
+
+            <p class="memories-label">A LITTLE PIECE OF US ♡</p>
+
+            <h2 class="memories-title">
+                Our Little Memories
+            </h2>
+
+            <p class="memories-description">
+                Setiap foto punya cerita, dan setiap cerita bersamamu adalah hal yang berharga.
+            </p>
+
+            <div class="slideshow-card">
+
+                <div class="slideshow-frame">
+
+                    <img id="memoryImage" src="images/foto1.jpg" alt="Foto kenangan kita" />
+
+                    <div class="photo-overlay"></div>
+
+                    <span class="photo-heart">♡</span>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <p id="memoryCounter">01 / 05</p>
+
+                    <h3 id="memoryTitle">Our First Memory</h3>
+
+                    <p id="memoryCaption">
+                        Salah satu momen yang selalu ingin kuingat.
+                    </p>
+
+                </div>
+
+                <div class="slide-progress" id="slideProgress" aria-hidden="true">
+                    <span id="slideProgressBar"></span>
+                </div>
+
+            </div>
+
+            <p class="memories-hint">
+                ♡ Kenangan kita, satu per satu ♡
+            </p>
+
+            <button type="button" id="nextMemoryBtn" class="memories-button">
+        Lihat Kenangan Berikutnya ♡
+        </button>
+
+            <button type="button" id="finishMemoriesBtn" class="memories-button memories-finish" hidden>
+        Lanjut ke Surat Cinta 💌
+        </button>
+
+        </div>
+
+    </section>
+
+    <!-- HALAMAN 3: SURAT CINTA -->
+    <section class="screen hidden" id="letterScreen">
+        <div class="content letter-card">
+            <p class="eyebrow">FROM MY HEART TO YOURS</p>
+
+            <h2>Untuk Kamu, Sayangkuu jun junnnn...</h2>
+
+            <p id="letterText" class="letter-text"></p>
+
+            <p id="signature" class="signature"></p>
+
+            <button class="main-btn" id="finalBtn" type="button">
+        Satu Kejutan Lagi ❤️
+      </button>
+        </div>
+    </section>
+
+    <!-- HALAMAN 4: ENDING DAN BALAS PESAN -->
+    <section class="screen hidden" id="finalScreen">
+        <div class="content final-card">
+            <div class="heart-orb">💗</div>
+
+            <p class="eyebrow">ONE LAST THING, MY LOVE</p>
+
+            <h1>It's Always You.</h1>
+
+            <p class="subtitle">
+                Coba Sekarang, aku pengen dengar isi hatimu. ❤️
+            </p>
+
+            <div class="reply-box">
+                <h2>Balas Pesanku yaaaaaa 💌</h2>
+
+                <p class="reply-hint">
+                    Tulis apa yang ingin kamu sampaikan. Ntar aku baca.
+                </p>
+
+                <form id="replyForm">
+                    <label for="replyName">Nama kamu</label>
+
+                    <input type="text" id="replyName" placeholder="Tulis namamu di sini..." required maxlength="60">
+
+                    <label for="replyMessage">Pesan untukku</label>
+
+                    <textarea id="replyMessage" placeholder="Aku mau bilang sesuatu..." required maxlength="1500" rows="5"></textarea>
+
+                    <button class="main-btn whatsapp-btn" type="submit">
+            💬 Kirim Balasan ke WhatsApp
+          </button>
+                </form>
+
+                <p class="reply-hint">
+                    WhatsApp akan terbuka agar kamu bisa mengirim pesan tersebut.
+                </p>
+            </div>
+
+            <p class="footer">I LOVE YOU, ALWAYS AND FOREVER ♡</p>
+
+            <button class="replay-btn" id="replayBtn" type="button">
+        ↻ Ulangi Kejutan
+      </button>
+        </div>
+    </section>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
